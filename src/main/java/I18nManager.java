@@ -1,8 +1,9 @@
 import java.util.HashMap;
 import java.util.ResourceBundle;
-
+//import java.util.logging.Logger;
+import org.apache.log4j.*;
 public class I18nManager {
-
+    static Logger logger = Logger.getLogger(I18nManager.class);
     private HashMap<String, ResourceBundle> data;
     public static void  getInstance(){}
 
@@ -11,7 +12,7 @@ public class I18nManager {
         ResourceBundle rs = data.get(lang);
 
         if (rs == null) {
-            //logger.info("classloader")
+            logger.info("classloader");
             rs = ResourceBundle.getBundle(lang);
             data.put(lang, rs);
         }
