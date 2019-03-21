@@ -6,6 +6,9 @@ public class I18nManager {
     static Logger logger = Logger.getLogger(I18nManager.class);
     private HashMap<String, ResourceBundle> data;
     private static I18nManager single_instance = null;
+    private I18nManager(){
+        //crear hashmap
+    }
     public static I18nManager getInstance()
     {
         if (single_instance == null)
