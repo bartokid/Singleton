@@ -14,7 +14,10 @@ public class I18nManagerTest {
         String text2 = I18nManager.getInstance().getText("es", "l1");
         Assert.assertEquals("Hola", text2);
 
-        String text3 = I18nManager.getInstance().getText("es", "l2");
-        Assert.assertEquals("Adios", text2);
+        String text3 = I18nManager.getInstance().getText("en", "l2");
+        Assert.assertEquals("Bye", text3);
+
+        String text4 = I18nManager.getInstance().getText("es", "l2");
+        Assert.assertEquals("Adios", text4);
     }
 }
